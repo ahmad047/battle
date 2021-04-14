@@ -1,8 +1,10 @@
-class Player
-attr_reader :name, :hit_points
+# frozen_string_literal: true
 
-DEFAULT_HP = 60
-MINIMUM_DAMAGE = 10
+class Player
+  attr_reader :name, :hit_points
+
+  DEFAULT_HP = 60
+  MINIMUM_DAMAGE = 10
 
   def initialize(name)
     @name = name

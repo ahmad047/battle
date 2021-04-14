@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 feature 'Attack' do
   before do
     sign_in_and_play
