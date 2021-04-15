@@ -25,5 +25,4 @@ describe Player do
       expect { muhammad.receive_damage }.to change { muhammad.hit_points }.by(-minimum_damage)
     end
   end
-
 end
