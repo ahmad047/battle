@@ -26,9 +26,4 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'reduces the HP of player 2 after attack by player 1' do
-      expect { muhammad.attack(abdur) }.to change { abdur.hit_points }.by(-minimum_damage)
-    end
-  end
 end
