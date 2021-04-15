@@ -10,11 +10,7 @@ class Player
     @name = name
     @hit_points = DEFAULT_HP
   end
-
-  # def attack(player)
-  #   player.receive_damage
-  # end
-
+  
   def receive_damage
     @hit_points -= MINIMUM_DAMAGE
   end
