@@ -1,8 +1,22 @@
-<%= @game.player_1.name %> vs. <%= @game.player_2.name %><br>
+<h2><%= @game.player_1.name %> vs. <%= @game.player_2.name %></h2> <br>
 <br>
 
+<%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP<br>
 <%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP<br>
+
+<%= @game.current_player.name%>'s turn <br>
 <br>
 <form action='/attack'>
   <input type='submit' value='Attack'>
 </form><br>
+
+
+<% if false %> 
+ <% if @game.current_player == 'muhammad' %>
+  <%= @game.player_1.name%>'s turn <br>
+  <%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP<br>
+ <% else%>
+  <%= @game.player_2.name%>'s turn <br>
+  <%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP<br>
+ <% end%> 
+<% end %>  

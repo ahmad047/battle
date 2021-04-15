@@ -15,4 +15,10 @@ feature 'Attack' do
     expect(page).not_to have_content('abdur: 60HP')
     expect(page).to have_content('abdur: 50HP')
   end
+
+  scenario 'switch turn after the attack' do
+    click_button('Continue Playing')
+    expect(page).not_to have_content('muhammad\'s turn')
+    expect(page).to have_content('abdur\'s turn')
+  end
 end
