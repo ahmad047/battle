@@ -13,7 +13,9 @@ class Game
   end
 
   def attack(player)
-    player.receive_damage
+    player.receive_damage if player.hit_points.positive?
+    return 'abdur loses' if player.hit_points <= 0
+
     switch_turn
   end
 

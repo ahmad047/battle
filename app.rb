@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'sinatra/base'
 require 'sinatra/reloader'
 require './lib/player'
@@ -28,7 +26,13 @@ class Battle < Sinatra::Base
   get '/attack' do
     @game = $game
     @game.attack(@game.opponent)
+    redirect '/game-over' if @game.opponent.hit_points <= 0
     erb :attack
+  end
+
+  get '/game-over' do
+    @game = $game
+    erb :game_over
   end
 
   run! if app_file == $PROGRAM_NAME
